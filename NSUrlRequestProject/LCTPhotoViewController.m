@@ -83,28 +83,28 @@
 
 -(void)sliderDragged
 {
-    CGFloat intensitySepiaTone = self.sliderSepiaTone.value * 2 - 1;
-    CGFloat intensityColorMonochrome = self.sliderColorMonochrome.value;
-    CGFloat intensityHueAdjust = self.sliderHueAdjust.value * 2 - 1;
-    
-    CIImage *beginImage = [CIImage imageWithCGImage:self.photo.CGImage];
-    
-    CIFilter *filterSepiaTone = [CIFilter filterWithName:@"CISepiaTone" keysAndValues: kCIInputImageKey, beginImage, kCIInputIntensityKey, @(intensitySepiaTone), nil];
-    CIImage *outputImageSepiaTone = [filterSepiaTone outputImage];
-    
-    CIFilter *filterColorMonochrome = [CIFilter filterWithName:@"CIColorMonochrome" keysAndValues: kCIInputImageKey, outputImageSepiaTone, kCIInputColorKey, [CIColor grayColor], kCIInputIntensityKey, @(intensityColorMonochrome), nil];
-    CIImage *outputImageColorMonochrome = [filterColorMonochrome outputImage];
-    
-    CIFilter *filterHueAdjust = [CIFilter filterWithName:@"CIHueAdjust" keysAndValues: kCIInputImageKey, outputImageColorMonochrome, kCIInputAngleKey, @(intensityHueAdjust), nil];
-    CIImage *outputImage = [filterHueAdjust outputImage];
-    
-    // Создаем Bitmap
-    CGImageRef cgimg = [self.context createCGImage:outputImage fromRect:[outputImage extent]];
-    // Создаем изображение
-    UIImage *newImage = [UIImage imageWithCGImage:cgimg];
-    self.imageView.image = newImage;
-    // Релизим ImageRef, потому как там старое C API, нужно ручками
-    CGImageRelease(cgimg);
+            CGFloat intensitySepiaTone = self.sliderSepiaTone.value * 2 - 1;
+            CGFloat intensityColorMonochrome = self.sliderColorMonochrome.value;
+            CGFloat intensityHueAdjust = self.sliderHueAdjust.value * 2 - 1;
+            
+            CIImage *beginImage = [CIImage imageWithCGImage:self.photo.CGImage];
+            
+            CIFilter *filterSepiaTone = [CIFilter filterWithName:@"CISepiaTone" keysAndValues: kCIInputImageKey, beginImage, kCIInputIntensityKey, @(intensitySepiaTone), nil];
+            CIImage *outputImageSepiaTone = [filterSepiaTone outputImage];
+            
+            CIFilter *filterColorMonochrome = [CIFilter filterWithName:@"CIColorMonochrome" keysAndValues: kCIInputImageKey, outputImageSepiaTone, kCIInputColorKey, [CIColor grayColor], kCIInputIntensityKey, @(intensityColorMonochrome), nil];
+            CIImage *outputImageColorMonochrome = [filterColorMonochrome outputImage];
+            
+            CIFilter *filterHueAdjust = [CIFilter filterWithName:@"CIHueAdjust" keysAndValues: kCIInputImageKey, outputImageColorMonochrome, kCIInputAngleKey, @(intensityHueAdjust), nil];
+            CIImage *outputImage = [filterHueAdjust outputImage];
+            
+            // Создаем Bitmap
+            CGImageRef cgimg = [self.context createCGImage:outputImage fromRect:[outputImage extent]];
+            // Создаем изображение
+            UIImage *newImage = [UIImage imageWithCGImage:cgimg];
+            self.imageView.image = newImage;
+            // Релизим ImageRef, потому как там старое C API, нужно ручками
+            CGImageRelease(cgimg);
 }
 
 

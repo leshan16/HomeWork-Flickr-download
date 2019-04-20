@@ -12,6 +12,7 @@
 - (void)loadingContinuesWithProgress:(double)progress;
 - (void)loadingIsDoneWithDataRecieved:(NSData *)dataRecieved;
 - (void)FlickrLoadingIsDone:(NSData *)dataRecieved;
+- (void)showAlert:(NSString *)textAlert;
 
 @end
 

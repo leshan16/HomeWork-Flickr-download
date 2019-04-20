@@ -12,6 +12,7 @@
 #import "LCTSearchBar.h"
 #import "LCTCollectionView.h"
 #import "LCTPhotoViewController.h"
+#import "LCTNotificationServiceProtocol.h"
 
 
 #define FIRST_STEP 0
@@ -185,6 +186,7 @@ static const CGFloat imageOffset = 100.f;
 - (void)flickrSearch:(NSString *)searchString
 {
     [self.collectionView.arrayImage removeAllObjects];
+    [self.collectionView reloadData];
     self.searchString = searchString;
     self.collectionView.page = 1;
     [self.networkService findFlickrPhotoWithSearchString:searchString forPage:1];
@@ -211,6 +213,32 @@ static const CGFloat imageOffset = 100.f;
 {
     [self.networkService findFlickrPhotoWithSearchString:self.searchString forPage:page];
 }
+
+
+- (void)searchPhotoForNotification:(NSString *)searchString
+{
+    [self.collectionView.arrayImage removeAllObjects];
+    [self.collectionView reloadData];
+    self.searchString = searchString;
+    self.collectionView.page = 1;
+    self.searchBar.text = searchString;
+    [self.networkService findFlickrPhotoWithSearchString:searchString forPage:1];
+}
+
+
+- (void)showAlert:(NSString *)textAlert
+{
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Ошибка"
+                                                                             message:textAlert
+                                                                      preferredStyle:UIAlertControllerStyleAlert];
+    //We add buttons to the alert controller by creating UIAlertActions:
+    UIAlertAction *actionOk = [UIAlertAction actionWithTitle:@"Ok"
+                                                       style:UIAlertActionStyleCancel
+                                                     handler:nil]; //You can use a block here to handle a press on this button
+    [alertController addAction:actionOk];
+    [self presentViewController:alertController animated:YES completion:nil];
+}
+
 
 
 @end

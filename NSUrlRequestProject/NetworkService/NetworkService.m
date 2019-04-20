@@ -88,14 +88,24 @@
     [request setURL:[NSURL URLWithString: urlString]];
     [request setHTTPMethod:@"GET"];
     [request setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
-    [request setTimeoutInterval:15];
+    [request setTimeoutInterval:10];
     
     NSURLSession *session;
     session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
     
     NSURLSessionDataTask *sessionDataTask = [session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error)
     {
+        if (!data) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+            [self.output showAlert:@"Отсутствует интернет соединение"];
+            });
+            return;
+        }
         NSDictionary *temp = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
+        if (error) {
+            [self.output showAlert:@"Получен некорректный запрос"];
+            return;
+        }
         NSArray *arrayPhoto = temp[@"photos"][@"photo"];
         for (NSDictionary *item in arrayPhoto) {
             

@@ -16,9 +16,13 @@
 		1FC25EE11FD01B78009C5C73 /* NetworkService.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FC25EDF1FD01B78009C5C73 /* NetworkService.m */; };
 		1FC25EE51FD02AF2009C5C73 /* NetworkHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FC25EE41FD02AF2009C5C73 /* NetworkHelper.m */; };
 		1FC25EE91FD070A1009C5C73 /* SBSProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FC25EE81FD070A1009C5C73 /* SBSProgressView.m */; };
+		CB6717FD226AEFEB00E58401 /* Cat.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = CB6717FC226AEFEB00E58401 /* Cat.jpeg */; };
+		CB6717FF226AF4D900E58401 /* Dog.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = CB6717FE226AF4D900E58401 /* Dog.jpeg */; };
+		CB671801226AF53E00E58401 /* Cow.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CB671800226AF53E00E58401 /* Cow.jpg */; };
 		CB6725872264D2FF005AA013 /* LCTPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB6725862264D2FF005AA013 /* LCTPhotoViewController.m */; };
 		CB8DA3C52263D9D4009FF869 /* LCTCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB8DA3C42263D9D4009FF869 /* LCTCollectionView.m */; };
 		CB8DA3C92263DF8F009FF869 /* LCTCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CB8DA3C82263DF8F009FF869 /* LCTCollectionViewCell.m */; };
+		CBCBA7AA2269274600E47217 /* LCTNotificationService.m in Sources */ = {isa = PBXBuildFile; fileRef = CBCBA7A92269274600E47217 /* LCTNotificationService.m */; };
 		CBD46191226386240093EEE1 /* LCTSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = CBD46190226386240093EEE1 /* LCTSearchBar.m */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +45,10 @@
 		1FC25EE71FD070A1009C5C73 /* SBSProgressView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SBSProgressView.h; sourceTree = "<group>"; };
 		1FC25EE81FD070A1009C5C73 /* SBSProgressView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SBSProgressView.m; sourceTree = "<group>"; };
 		CB05D46522684A2400F94190 /* LCTPhotoViewControllerProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LCTPhotoViewControllerProtocol.h; sourceTree = "<group>"; };
+		CB6717FA226AE7F700E58401 /* LCTNotificationServiceProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LCTNotificationServiceProtocol.h; sourceTree = "<group>"; };
+		CB6717FC226AEFEB00E58401 /* Cat.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Cat.jpeg; path = ../../Cat.jpeg; sourceTree = "<group>"; };
+		CB6717FE226AF4D900E58401 /* Dog.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Dog.jpeg; path = ../../Dog.jpeg; sourceTree = "<group>"; };
+		CB671800226AF53E00E58401 /* Cow.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Cow.jpg; path = ../../Cow.jpg; sourceTree = "<group>"; };
 		CB6725822264D007005AA013 /* LCTCollectionViewProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCTCollectionViewProtocol.h; sourceTree = "<group>"; };
 		CB6725852264D2FF005AA013 /* LCTPhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCTPhotoViewController.h; sourceTree = "<group>"; };
 		CB6725862264D2FF005AA013 /* LCTPhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCTPhotoViewController.m; sourceTree = "<group>"; };
@@ -49,6 +57,8 @@
 		CB8DA3C42263D9D4009FF869 /* LCTCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCTCollectionView.m; sourceTree = "<group>"; };
 		CB8DA3C72263DF8F009FF869 /* LCTCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCTCollectionViewCell.h; sourceTree = "<group>"; };
 		CB8DA3C82263DF8F009FF869 /* LCTCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCTCollectionViewCell.m; sourceTree = "<group>"; };
+		CBCBA7A82269274600E47217 /* LCTNotificationService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCTNotificationService.h; sourceTree = "<group>"; };
+		CBCBA7A92269274600E47217 /* LCTNotificationService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCTNotificationService.m; sourceTree = "<group>"; };
 		CBD4618F226386240093EEE1 /* LCTSearchBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCTSearchBar.h; sourceTree = "<group>"; };
 		CBD46190226386240093EEE1 /* LCTSearchBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCTSearchBar.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -83,6 +93,8 @@
 		1FC25EC41FD00489009C5C73 /* NSUrlRequestProject */ = {
 			isa = PBXGroup;
 			children = (
+				CB6717FB226AEFB000E58401 /* pushImage */,
+				CBCBA7A7226926D600E47217 /* LCTNotificationService */,
 				CB6725882264D309005AA013 /* LCTPhotoViewController */,
 				CB8DA3C62263DF64009FF869 /* LCTCollectionViewCell */,
 				CB8DA3C22263D95F009FF869 /* LCTCollectionView */,
@@ -123,6 +135,16 @@
 			path = CustomProgressView;
 			sourceTree = "<group>";
 		};
+		CB6717FB226AEFB000E58401 /* pushImage */ = {
+			isa = PBXGroup;
+			children = (
+				CB6717FE226AF4D900E58401 /* Dog.jpeg */,
+				CB671800226AF53E00E58401 /* Cow.jpg */,
+				CB6717FC226AEFEB00E58401 /* Cat.jpeg */,
+			);
+			name = pushImage;
+			sourceTree = "<group>";
+		};
 		CB6725882264D309005AA013 /* LCTPhotoViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -150,6 +172,16 @@
 				CB8DA3C82263DF8F009FF869 /* LCTCollectionViewCell.m */,
 			);
 			name = LCTCollectionViewCell;
+			sourceTree = "<group>";
+		};
+		CBCBA7A7226926D600E47217 /* LCTNotificationService */ = {
+			isa = PBXGroup;
+			children = (
+				CB6717FA226AE7F700E58401 /* LCTNotificationServiceProtocol.h */,
+				CBCBA7A82269274600E47217 /* LCTNotificationService.h */,
+				CBCBA7A92269274600E47217 /* LCTNotificationService.m */,
+			);
+			name = LCTNotificationService;
 			sourceTree = "<group>";
 		};
 		CBD46192226386370093EEE1 /* LCTSearchBar */ = {
@@ -220,6 +252,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB6717FD226AEFEB00E58401 /* Cat.jpeg in Resources */,
+				CB671801226AF53E00E58401 /* Cow.jpg in Resources */,
+				CB6717FF226AF4D900E58401 /* Dog.jpeg in Resources */,
 				1FC25ED21FD00489009C5C73 /* LaunchScreen.storyboard in Resources */,
 				1FC25ECF1FD00489009C5C73 /* Assets.xcassets in Resources */,
 				1FC25ECD1FD00489009C5C73 /* Main.storyboard in Resources */,
@@ -239,6 +274,7 @@
 				CB6725872264D2FF005AA013 /* LCTPhotoViewController.m in Sources */,
 				CB8DA3C92263DF8F009FF869 /* LCTCollectionViewCell.m in Sources */,
 				1FC25ED51FD00489009C5C73 /* main.m in Sources */,
+				CBCBA7AA2269274600E47217 /* LCTNotificationService.m in Sources */,
 				1FC25EE11FD01B78009C5C73 /* NetworkService.m in Sources */,
 				1FC25EC71FD00489009C5C73 /* AppDelegate.m in Sources */,
 				1FC25EE91FD070A1009C5C73 /* SBSProgressView.m in Sources */,
